@@ -1,0 +1,12 @@
+interface CreativeWork {
+  id: ID!
+  name: String!              # Equivalent to "title"
+  description: String        # Short description or summary
+  genre: [String]            # Genres or categories
+  datePublished: String      # Equivalent to release date
+  keywords: [String]         # Keywords/tags associated with the work
+  language: String           # Primary language
+  contentRating: String      # Content rating (e.g., PG-13, R)
+  image: String              # URL to a poster or cover image
+  url: String                # Link to more info about the creative work
+}
