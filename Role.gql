@@ -1,0 +1,5 @@
+# Role type to track which actor played the character in which media (Movie, TVShow, or VideoGame)
+type Role {
+  actor: Person!                        # Actor who played the character
+  media: MediaUnion!                    # Movie, TVShow, or VideoGame in which the character appeared
+}

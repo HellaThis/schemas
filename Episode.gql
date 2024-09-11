@@ -1,0 +1,27 @@
+# Episode type for individual episodes of a TVShow
+type Episode implements CreativeWork {
+  id: ID!
+  name: String!
+  description: String
+  genre: [String]
+  datePublished: String
+  keywords: [String]
+  language: String
+  contentRating: String
+  image: String
+  url: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  # Episode-specific fields from Schema.org
+  episodeNumber: Int          # Episode number in the season
+  partOfSeason: Season        # Reference to the season this episode is part of
+  partOfSeries: TVShow        # Reference to the TVShow this episode belongs to
+  director: [Person]          # Director(s) of the episode
+  actor: [Person]             # Cast members in the episode
+  guestStar: [Person]         # Guest stars appearing in the episode
+  productionCompany: Organization # Production company for the episode
+  trailer: VideoObject        # Trailer or preview video for the episode
+}

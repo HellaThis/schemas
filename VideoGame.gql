@@ -1,0 +1,33 @@
+# VideoGame type aligned with Schema.org
+type VideoGame implements CreativeWork {
+  id: ID!
+  name: String!
+  description: String
+  genre: [String]
+  datePublished: String
+  keywords: [String]
+  language: String
+  contentRating: String
+  image: String
+  url: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  # VideoGame-specific fields from Schema.org
+  developer: Organization       # The developer of the video game
+  publisher: Organization       # The publisher of the video game
+  director: [Person]            # Directors of the game
+  actor: [Person]               # Voice actors for characters in the game
+  composer: [Person]            # Composer(s) of the game's soundtrack
+  gamePlatform: [String]        # Platforms the game is available on (e.g., "PlayStation", "PC")
+  gameMode: [String]            # Game modes (e.g., "Single Player", "Multiplayer")
+  playMode: [String]            # Play modes (e.g., "Co-op", "Competitive")
+  trailer: VideoObject          # Trailer video for the video game
+  releaseDate: String           # Release date of the video game
+  inLanguage: String            # The language of the game
+  countryOfOrigin: Country      # Country where the game was developed
+  awards: [Award]               # Awards won by the video game
+  series: Franchise             # Franchise the video game is part of
+}

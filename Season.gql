@@ -1,0 +1,23 @@
+# Season type representing a season of a TVShow
+type Season implements CreativeWork {
+  id: ID!
+  name: String!
+  description: String
+  genre: [String]
+  datePublished: String
+  keywords: [String]
+  language: String
+  contentRating: String
+  image: String
+  url: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  # Season-specific fields from Schema.org
+  seasonNumber: Int           # The season number
+  episodes: [Episode]         # List of episodes in this season
+  partOfSeries: TVShow        # The TVShow this season is part of
+  numberOfEpisodes: Int       # Number of episodes in this season
+}

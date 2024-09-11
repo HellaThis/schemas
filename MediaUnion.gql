@@ -1,0 +1,2 @@
+# MediaUnion type to represent either Movie, TVShow, or VideoGame
+union MediaUnion = Movie | TVShow | VideoGame

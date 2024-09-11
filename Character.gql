@@ -1,0 +1,25 @@
+# Character type with mapping to specific media (Movie, TVShow, VideoGame)
+type Character implements Thing {
+  id: ID!
+  name: String!                        # Name of the character
+  alternateName: String                 # An alternate name for the character (e.g., superhero alias)
+  description: String                   # Description or biography of the character
+  image: String                         # URL to an image of the character
+  url: String                           # URL with more information about the character
+  additionalType: String                # An additional type for the character
+  sameAs: String                        # URL to a reference page (e.g., Wikipedia)
+  identifier: String                    # Unique identifier (e.g., UUID)
+  disambiguatingDescription: String     # Description to differentiate from characters with similar names
+
+  # Character-specific fields
+  playedBy: [Role]                      # A list of roles played by actors in different media
+  abilities: [String]                   # Special abilities or powers of the character (e.g., "Flying", "Super strength")
+  affiliations: [Organization]          # Organizations the character is affiliated with (e.g., "The Avengers")
+  firstAppearance: CreativeWork         # The first movie, TV show, or video game where the character appeared
+  species: String                       # Species of the character (e.g., "Human", "Alien")
+  gender: String                        # Gender of the character
+  nationality: Country                  # Nationality of the character (if applicable)
+  birthDate: String                     # Birth date of the character (if applicable)
+  deathDate: String                     # Death date of the character (if applicable)
+  originStory: String                   # Origin story of the character
+}

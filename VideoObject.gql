@@ -1,0 +1,16 @@
+type VideoObject implements Thing {
+  id: ID!
+  name: String!
+  description: String
+  alternateName: String
+  url: String
+  image: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  embedUrl: String
+  uploadDate: String
+  thumbnailUrl: String
+}

@@ -1,0 +1,17 @@
+# Award type for awards won by TVSeries or individuals
+type Award implements Thing {
+  id: ID!
+  name: String!
+  alternateName: String
+  description: String
+  url: String
+  image: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  category: String            # Category of the award (e.g., Best Drama Series)
+  year: Int                   # Year the award was given
+  recipient: Person           # The person or entity that won the award
+}

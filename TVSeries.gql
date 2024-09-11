@@ -1,0 +1,39 @@
+# TVSeries type aligned with Schema.org
+type TVSeries implements CreativeWork {
+  id: ID!
+  name: String!
+  description: String
+  genre: [String]
+  datePublished: String
+  keywords: [String]
+  language: String
+  contentRating: String
+  image: String
+  url: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  # TVSeries-specific fields from Schema.org
+  actor: [Person]             # Cast members appearing in the TVSeries
+  director: [Person]          # Director(s) of the TVSeries
+  creator: [Person]           # Creator(s) of the TVSeries
+  productionCompany: Organization # Production company responsible for the TVSeries
+  episodes: [Episode]         # List of episodes in the TVSeries
+  seasons: [Season]           # List of seasons in the TVSeries
+  numberOfEpisodes: Int       # Total number of episodes in the TVSeries
+  numberOfSeasons: Int        # Total number of seasons in the TVSeries
+  trailer: VideoObject        # Trailer video for the TVSeries
+  countryOfOrigin: Country    # Country where the TVSeries was produced
+  musicBy: [Person]           # Composer or music contributor
+  broadcastNetwork: Organization # Network or channel broadcasting the series
+  numberOfAwards: Int         # Number of awards won by the series
+  numberOfNominations: Int    # Number of award nominations
+  inLanguage: String          # Language of the TVSeries
+  isPartOfSeries: TVSeries    # If the TVSeries is part of a larger series
+  duration: String            # Duration of typical episodes (ISO 8601 format)
+  startDate: String           # Start date of the series
+  endDate: String             # End date of the series (if applicable)
+  awards: [Award]             # Awards won by the TVSeries
+}

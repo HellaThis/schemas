@@ -1,0 +1,26 @@
+# Update to Franchise to include VideoGames
+type Franchise implements Thing {
+  id: ID!
+  name: String!                # Name of the franchise (e.g., "Star Wars", "Marvel Cinematic Universe")
+  description: String           # Description of the franchise
+  url: String                   # URL for more details about the franchise (e.g., Wikipedia, official site)
+  image: String                 # URL to an image (e.g., franchise logo)
+  additionalType: String        # An additional type for classification
+  sameAs: String                # URL to a reference webpage (e.g., another identifier)
+  identifier: String            # An identifier for the franchise (e.g., UUID)
+  disambiguatingDescription: String # A short description to differentiate from other franchises
+
+  # Franchise-specific fields
+  movies: [Movie]               # List of Movies in the franchise
+  tvShows: [TVSeries]           # List of TVShows in the franchise
+  videoGames: [VideoGame]       # List of VideoGames in the franchise
+  creator: [Person]             # Creator(s) of the franchise
+  productionCompany: Organization # Production company or companies responsible for the franchise
+  countryOfOrigin: Country      # Country where the franchise originated
+  numberOfMovies: Int           # Total number of movies in the franchise
+  numberOfTVShows: Int          # Total number of TV shows in the franchise
+  numberOfVideoGames: Int       # Total number of video games in the franchise
+  startYear: String             # The year the first movie, TV show, or video game in the franchise was released
+  endYear: String               # The year the last movie, TV show, or video game in the franchise was released (if applicable)
+  awards: [Award]               # Awards won by the franchise or related works
+}

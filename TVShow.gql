@@ -1,0 +1,30 @@
+# TVShow type aligned with Schema.org
+type TVShow implements CreativeWork {
+  id: ID!
+  name: String!
+  description: String
+  genre: [String]
+  datePublished: String
+  keywords: [String]
+  language: String
+  contentRating: String
+  image: String
+  url: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  # TVShow-specific fields from Schema.org
+  actor: [Person]             # List of actors appearing in the TVShow
+  director: [Person]          # Director(s) of the TVShow
+  creator: [Person]           # Creator(s) of the TVShow
+  productionCompany: Organization # Production company responsible for the show
+  episodes: [Episode]         # List of episodes in the TVShow
+  seasons: [Season]           # List of seasons of the TVShow
+  numberOfEpisodes: Int       # Total number of episodes
+  numberOfSeasons: Int        # Total number of seasons
+  trailer: VideoObject        # Trailer video for the TVShow
+  countryOfOrigin: Country    # Country of origin
+  musicBy: [Person]           # Composer or music contributor
+}
