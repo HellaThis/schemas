@@ -1,0 +1,16 @@
+# Organization type based on Schema.org
+type Organization implements Thing {
+  id: ID!
+  name: String!
+  alternateName: String
+  description: String
+  url: String
+  image: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  logo: String                # URL to the organization's logo
+  url: String
+}

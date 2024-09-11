@@ -1,0 +1,17 @@
+# Place type (for birthPlace, deathPlace, etc.)
+type Place implements Thing {
+  id: ID!
+  name: String!
+  alternateName: String
+  description: String
+  url: String
+  image: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  address: String             # Full postal address
+  geo: GeoCoordinates         # Geographic coordinates
+}
+}

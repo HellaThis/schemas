@@ -1,0 +1,5 @@
+# GeoCoordinates type for geographic locations
+type GeoCoordinates {
+  latitude: Float
+  longitude: Float
+}

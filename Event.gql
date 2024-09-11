@@ -1,0 +1,16 @@
+# Event type for performances or other events in which a person is involved
+type Event implements Thing {
+  id: ID!
+  name: String!
+  alternateName: String
+  description: String
+  url: String
+  image: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  startDate: String           # Start date of the event
+  location: Place             # Location of the event
+}
