@@ -1,0 +1,25 @@
+# Movie type implementing CreativeWork, aligned with Schema.org's Movie type
+type Movie implements CreativeWork {
+  id: ID!
+  name: String!
+  description: String
+  genre: [String]
+  datePublished: String
+  keywords: [String]
+  language: String
+  contentRating: String
+  image: String
+  url: String
+  
+  # Movie-specific fields from Schema.org
+  duration: String           # Duration of the movie (ISO 8601 format, e.g., "PT2H30M")
+  actor: [Person]            # Cast members (Person)
+  director: [Person]         # Director(s)
+  producer: [Person]         # Producer(s)
+  productionCompany: Organization # Production company
+  musicBy: [Person]          # Composer/music contributor
+  countryOfOrigin: Country   # Country of origin
+  budget: MonetaryAmount     # Budget of the movie
+  boxOffice: MonetaryAmount  # Box office gross
+  trailer: VideoObject       # Link to a trailer video
+}
