@@ -1,0 +1,41 @@
+# Full Person type based on Schema.org
+type Person implements Thing {
+  id: ID!
+  name: String!
+  alternateName: String
+  description: String
+  url: String
+  image: String
+  additionalType: String
+  sameAs: String
+  identifier: String
+  disambiguatingDescription: String
+
+  # Person-specific fields from Schema.org
+  birthDate: String           # Birth date of the person
+  deathDate: String           # Death date of the person (if applicable)
+  gender: String              # Gender of the person
+  height: String              # Height of the person (e.g., "6 feet")
+  weight: String              # Weight of the person (e.g., "180 lbs")
+  jobTitle: String            # Person's current or past job title
+  nationality: Country         # Nationality of the person (links to the Country type)
+  worksFor: Organization      # The organization the person works for
+  spouse: Person              # The person's spouse (if applicable)
+  children: [Person]          # The person's children
+  parents: [Person]           # The person's parents
+  sibling: [Person]           # The person's siblings
+  alumniOf: Organization      # Educational institutions attended by the person
+  knows: [Person]             # People known by this person
+  knowsAbout: [String]        # Subjects the person knows about
+  knowsLanguage: [String]     # Languages spoken by the person
+  birthPlace: Place           # Place where the person was born
+  deathPlace: Place           # Place where the person died
+  honorificPrefix: String     # Honorific prefix (e.g., "Dr.")
+  honorificSuffix: String     # Honorific suffix (e.g., "PhD")
+  affiliation: Organization   # Organization with which the person is affiliated
+  award: [String]             # Awards won by the person
+  contactPoint: [ContactPoint]# Contact points for reaching the person
+  memberOf: [Organization]    # Memberships in organizations or groups
+  performerIn: Event          # Events in which the person has performed
+  worksFor: Organization      # The organization the person works for
+}
