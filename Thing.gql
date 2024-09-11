@@ -1,0 +1,13 @@
+# Thing is the most generic type, from which all entities inherit
+interface Thing {
+  id: ID!
+  name: String!              # Name of the entity
+  alternateName: String       # An alternative name for the item
+  description: String         # A short description of the entity
+  url: String                 # URL of the item
+  image: String               # URL to an image representing the entity
+  additionalType: String      # An additional type for the item, typically used for more specific types
+  sameAs: String              # URL of a reference webpage that unambiguously indicates the item's identity
+  identifier: String          # Identifier (e.g., ISBN, GTIN, UUID) for the entity
+  disambiguatingDescription: String # A short description to disambiguate from other entities with the same name
+}
